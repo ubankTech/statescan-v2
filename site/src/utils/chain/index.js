@@ -54,6 +54,7 @@ export function hasBusiness() {
     proxy,
     assets,
     foreignAssets,
+    staking,
   } = getChainModules();
   return (
     identity ||
@@ -62,7 +63,8 @@ export function hasBusiness() {
     vestings ||
     proxy ||
     assets ||
-    foreignAssets
+    foreignAssets ||
+    staking?.validators
   );
 }
 
